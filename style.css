@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+        url(images/background.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav ul{
+    list-style-type: none;
+    border-top: 6px solid #e6af2e;
+    background-color: transparent;
+}
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: #e6af2e;
+}
+nav ul li a:hover{
+    color: #e0e2db;
+}
+@media screen and (min-width: 576px){
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    nav ul li{
+        flex: 1 0 auto;
+    }
+    .logo{
+        display: block;
+        text-align: center;
+    }
+}
+

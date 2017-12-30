@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpeg);
@@ -55,26 +50,23 @@ nav ul li a:hover::after {
     color: #e0e2db;
     transform: scaleX(0.45);
 }
-
-@media screen and (min-width: 576px) {
-    nav {
-        height: 7vh;
-    }
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: space-between;
-    }
-    nav ul li {
-        flex: 1 0 auto;
-    }
-    .logo {
-        display: block;
-        text-align: center;
-    }
+/*----------------TITLE-------------------*/
+.title{
+    margin: 40px 0;
 }
-
+.title-text{
+    text-align: center;
+    font-size: 40px;
+    color: #e0e2db;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.title-underline{
+    width: 200px;
+    border: 3px solid #e6af2e;
+    margin: 0 auto;
+}
+/*IMIE*/
 #kontener {
     height: 100vh;
     display: flex;
@@ -82,9 +74,11 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
 }
-.naglowek{
+
+.naglowek {
     transform: translateY(-7vh);
 }
+
 .naglowek h1 {
     color: #e6af2e;
     text-align: center;
@@ -113,7 +107,87 @@ nav ul li a:hover::after {
     margin-top: 3px;
     border: 2px solid #e6af2e;
 }
+/*----------------PROJECTS-------------------*/
+#projects .title-text{
+    color: #191716;
+}
+#projects{
+    padding: 20px 0 80px 0;
+    background-color: #e0e2db;
+}
+.projects-container{
+    max-width: 90vw;
+    margin: 0 auto;
+}
+.projects-item{
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    color: #e0e2db;
+    overflow: hidden;
+    margin: 20px 0;
+}
+#projects img{
+ width: 100%;
+    min-height: 100%;
+    display: block;
+    transition: transform 4s;
+}
+.img-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 4s;
+}
+.img-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10ps;
+    font-size: 20px;
+    opacity: 0;
+    color: #e6af2e;
+    transition: opacity 4s;
+}
+.img-text h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.img-text h6{
+    font-size: 15px;
+}
+.projects-item:hover img{
+    opacity: 0.4;
+    transform: scale(1.3);
+}
+.projects-item:hover .img-text,
+.projects-item:hover .img-footer{
+    opacity: 1;
+}
+
+
 @media screen and (min-width: 576px) {
+    nav {
+        height: 7vh;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    nav ul li {
+        flex: 1 0 auto;
+    }
+    .logo {
+        display: block;
+        text-align: center;
+    }
     #kontener {
         height: 93vh;
         display: flex;
@@ -137,6 +211,11 @@ nav ul li a:hover::after {
         width: 40%;
         border: 2px solid #e6af2e;
     }
+    .projects-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 1em;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -152,7 +231,13 @@ nav ul li a:hover::after {
     .naglowek hr {
         border: 3px solid #e6af2e;
     }
+    .projects-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 1em;
+    }
 }
+
 @media screen and (min-width: 992px) {
     .naglowek h1 {
         font-size: 4em;
@@ -168,6 +253,7 @@ nav ul li a:hover::after {
         border: 4px solid #e6af2e;
     }
 }
+
 @media screen and (min-width: 1224px) {
     .naglowek h1 {
         font-size: 4em;
@@ -182,6 +268,7 @@ nav ul li a:hover::after {
         border: 5px solid #e6af2e;
     }
 }
+
 @media screen and (min-width: 1624px) {
     .naglowek h1 {
         font-size: 6em;
@@ -197,6 +284,7 @@ nav ul li a:hover::after {
         border: 6px solid #e6af2e;
     }
 }
+
 @media screen and (min-width: 1824px) {
     .naglowek h1 {
         font-size: 8em;

@@ -11,7 +11,6 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 nav {
@@ -29,7 +28,7 @@ nav ul li a {
     text-decoration: none;
     display: block;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     padding: 15px 25px;
     color: #e6af2e;
     position: relative;
@@ -183,7 +182,7 @@ nav ul li a:hover::after {
     font-size: 15px;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 576px) {
     nav {
         height: 7vh;
     }
@@ -195,6 +194,9 @@ nav ul li a:hover::after {
     }
     nav ul li {
         flex: 1 1 auto;
+    }
+    nav ul li a {
+        font-size: 20px;
     }
     .logo {
         display: block;
@@ -246,6 +248,12 @@ nav ul li a:hover::after {
     .img-footer {
         opacity: 0;
         transition: opacity 4s;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav ul li a {
+        font-size: 25px;
     }
 }
 
@@ -331,4 +339,3 @@ nav ul li a:hover::after {
         border: 7px solid #e6af2e;
     }
 }
-

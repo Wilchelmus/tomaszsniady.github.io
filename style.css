@@ -147,6 +147,9 @@ nav ul li a:hover::after {
     min-height: 100%;
     display: block;
     transition: transform 4s;
+}
+
+.projects-item img {
     opacity: 0.4;
 }
 
@@ -203,7 +206,7 @@ nav ul li a:hover::after {
         justify-content: center;
         align-items: center;
     }
-    #projects img {
+    .projects-item img {
         opacity: 1;
     }
     .naglowek h1 {

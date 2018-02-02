@@ -188,12 +188,12 @@ nav ul li a:hover::after {
     }
     nav ul {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: no-wrap;
         align-items: baseline;
         justify-content: space-between;
     }
     nav ul li {
-        flex: 1 0 auto;
+        flex: 1 1 auto;
     }
     .logo {
         display: block;

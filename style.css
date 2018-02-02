@@ -11,7 +11,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+
 }
 
 nav {
@@ -183,7 +183,7 @@ nav ul li a:hover::after {
     font-size: 15px;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 650px) {
     nav {
         height: 7vh;
     }
@@ -331,3 +331,4 @@ nav ul li a:hover::after {
         border: 7px solid #e6af2e;
     }
 }
+
